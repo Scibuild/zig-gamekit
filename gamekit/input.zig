@@ -171,6 +171,7 @@ pub const Input = struct {
 
     // gets the scaled mouse position based on the currently bound render texture scale and offset
     // as calcuated in OffscreenPass. scale should be scale and offset_n is the calculated x, y value.
+    // TODO: FIX
     pub fn mousePosScaled(self: Input) math.Vec2 {
         const p = self.mousePos();
 
@@ -179,6 +180,7 @@ pub const Input = struct {
         return .{ .x = xf / self.res_scaler.scale, .y = yf / self.res_scaler.scale };
     }
 
+    // TODO: delete
     pub fn mousePosScaledVec(self: Input) math.Vec2 {
         var x: i32 = undefined;
         var y: i32 = undefined;
