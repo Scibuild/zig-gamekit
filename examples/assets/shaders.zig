@@ -11,7 +11,6 @@ pub fn createMode7Shader() Mode7Shader {
     return Mode7Shader.init(.{ .frag = frag, .onPostBind = Mode7Shader.onPostBind });
 }
 
-
 pub const VertexParams = extern struct {
     pub const metadata = .{
         .uniforms = .{ .VertexParams = .{ .type = .float4, .array_count = 2 } },
@@ -39,4 +38,3 @@ pub const Mode7Params = extern struct {
     y1: f32 = 0,
     y2: f32 = 0,
 };
-
